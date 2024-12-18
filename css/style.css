@@ -1,0 +1,500 @@
+@charset "UTF-8";
+
+.slick-dots{
+    bottom: 10px;
+}
+.img-sp {
+    display: none;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+body {
+    background-color: #E8D9BF;
+}
+
+.header_innner {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 下はセットでつけてあげる */
+    position: absolute;
+    width: 100%;
+    /* 147 / 1920(アートボード） = 0.076 */
+    padding-right: 7.6%;
+    /*  55 / 1920 = 0.028 */
+    padding-left: 2.8%;
+    /* ロゴやメニューの重なり順を直す */
+    z-index: 9997;
+}
+
+.header_nav-list {
+    display: flex;
+    gap: 77px;
+}
+.header_nav-item {
+    color: #ffffff;
+    font-weight: bold;
+    font-family:"游ゴシック体", YuGothic, "游ゴシック Medium", 
+    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+.logo {
+    width: 227px;
+}
+
+
+.section {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 30px;
+    margin: 65px;
+}
+
+.box {
+    text-align: center;
+ 
+}
+
+.box-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title {
+   font-size: 82px;
+   margin-bottom: 58px;
+
+}
+
+.about-text {
+    font-size: 17px;
+    margin-bottom: 102px;
+    text-align: center;
+}
+
+
+
+.text { 
+    font-size: 44px;
+    margin-bottom: 39px;
+    text-align: center;
+    margin-left: 72px;
+}
+
+h2 img {
+    height: 77px;
+    width: auto;
+    
+}
+
+.image {
+    text-align: center;
+    margin-top: 6rem;
+
+}
+
+.text-inner {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 2rem;
+}
+
+#ellipse {
+    width: 50%;
+}
+
+#ellipse img {
+    border-bottom-right-radius: 90px;
+    width: 100%;
+}
+
+#about .text {
+    width: 50%;
+}
+
+#about h3 {
+    text-align: left;
+    margin-top: 2rem;
+}
+#about h2 {
+    text-align: left;
+}
+
+
+.wrapper p{
+    text-align: left;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+}
+
+
+.menu {
+    max-width: 30%;
+}
+
+.menu .content-title {
+    margin-top: -20px;
+}
+
+.menu-photo img {
+    border-top-right-radius: 42px;
+    margin-top: 2rem;
+}
+
+
+.content-title {
+    color: #D30202;
+    font-size: 38px;
+}
+
+.carousel {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+  }
+  
+.carousel-item {
+    max-width: 20%;
+    margin-top: 2rem;
+
+  }
+#event {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#event ul {
+    padding: 30px;
+    background-color: #ffffff;
+    border: 3px solid #000;
+    margin-top: 2rem;
+}
+
+#event li {
+    display: flex;
+    gap: 20px;
+    line-height: 2;
+    font-size: 23px;
+    align-items: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#event p {
+    text-decoration: underline;
+}
+
+
+/* イベント部分が真ん中寄せにならない */
+.wrapper span {
+    text-align: center;
+}
+
+
+iframe {
+    width: 100%;
+    height: 470px;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+    margin-top: 2rem;
+}
+
+h3 img {
+    height: 50px;
+    width: auto;
+}
+
+
+.footer_container {
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+}
+.adress {
+    font-size: 20px;
+}
+footer {
+    background-color: #ffffff;
+}
+
+
+/* 真ん中に配置できない */
+.footer_container h3 li {
+    text-align: center;
+}
+
+.copy {
+    text-align: center;
+    padding: 50px;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 125px;
+}
+
+
+.hamburger,
+.header_nav-sp {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .header_nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        /* position: absolute; 前面に浮き出す */
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        /*cursor: pointer;  クリックできる設定になる */
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .hamburger span {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 14px;
+        /* transition: 0.3s; 動きを滑らかにする */
+        transition: 0.3s;
+    }
+
+    /* ------擬似要素------ */
+    .hamburger span::before {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        content: "";
+        top: -12px;
+        /* transition: 0.3s; 動きを滑らかにする */
+        transition: 0.3s;
+    }
+
+    .hamburger span::after {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        content: "";
+        bottom: -12px;
+        /* transition: 0.3s; 動きを滑らかにする */
+        transition: 0.3s;
+    }
+
+    /* ------3本線を×印にする------ */
+    /*  background-color: transparent; 線を真ん中にする */
+    .open span {
+     background-color: transparent;
+    }
+
+    /* .open span::before  真ん中の線の前 */
+    /*  transform: rotate(45deg); 斜め45度
+        top: 0; 真ん中に戻す*/
+    .open span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    /* .open span::after  真ん中の線の前 */
+    /*  transform: rotate(-45deg); 反対に斜め45度
+        bottom: 0; 真ん中に戻す*/
+    .open span::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .header_nav-sp {
+     position: absolute;
+     /*  z-index: 9998; 重なりの順番を指定9999が一番上 positionが適用されていないと効かない*/
+     z-index: 9998;
+     width: 100%;
+     height: 100vh;
+     background-color: #00000096;
+    }
+    .header_nav-sp .header_nav-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 20px;
+    }
+
+
+
+    .title {
+        font-size: 70px;
+    }
+
+    #about h3 {
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    h2 img {
+        height: 45px;
+    }
+
+    .logo{
+        width: 188px;
+    }
+
+    .img-pc {
+        display: none;
+    }
+    .img-sp {
+        display: block;
+    }
+
+    .section-title {
+        font-size: 17px;
+    }
+    .title {
+        font-size: 38px;
+        font-weight: normal;
+    }
+
+     .about-text {
+        font-size: 16px;
+     }
+
+     .text {
+        text-align: center;
+     }
+
+     #about h2 {
+        text-align: center;
+        /* ABOUT USを写真の上に */
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+  
+     #about h3 {
+        font-size: 36px;
+        font-weight: normal;
+    }
+
+    #about .text {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .wrapper p {
+        max-width: max-content;
+    }
+
+    
+    #ellipse {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    #ellipse img {
+        width: 375px;
+        height: auto;
+    }
+    .box-inner {
+        display: block;
+         /* ABOUT USを写真の上に */
+        position: relative;
+        padding-top:90px;
+    }
+   
+
+    /* MENU */
+    .container {
+        display: block;
+        padding: 0 10px;
+    }
+    .menu {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    /* .menu-photo img {
+        width: 100%;
+        height: auto;
+    } */
+
+    .menu .content-title {
+        margin-bottom: 10px;
+    }
+
+    /* EVENT */
+    #event ul {
+        /* width: 335px; */
+        margin: 0 auto;
+        text-align: left;
+    }
+    #event li {
+        display: block;
+        font-size: 16px;
+      
+    }
+   #event p {
+    margin-bottom: 10px;
+    /* はみ出した箇所を・・・にしてくれる */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+   }
+
+   /* FOOTER */
+   .footer_container {
+    display: block;
+    text-align: center;
+   }
+
+   .adress {
+    text-align: center;
+   }
+
+   /* 地図 */
+
+   iframe {
+    height: 191px;
+   }
+
+   /* TOPボタン */
+   .toTop {
+    width: 100px;
+    height: 100px;
+    bottom: 10px;
+    right: 10px;
+   }
+}
+
+/* メインビジュアル下のボタンを白に変更 */
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #ffffff;
+}
+
+
